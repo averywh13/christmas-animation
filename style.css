@@ -1,0 +1,89 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Hammersmith One', sans-serif;
+}
+.box {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    background: #383aa0;
+    overflow: hidden;
+    animation: bgAnimate 10s linear infinite;
+}
+.box .tree {
+    position: absolute;
+    bottom: -131px;
+    width: 100%;
+    height: 100%;
+}
+.box .tree.tree1 {
+    background: url('imgs/tree1.png');
+    background-repeat: repeat-x;
+    animation: animate 15s linear infinite;
+    z-index: 3;
+}
+.box .tree.tree2 {
+    background: url('imgs/tree2.png');
+    background-repeat: repeat-x;
+    animation: animate 25s linear infinite;
+}
+.box .tree.tree3 {
+    background: url('imgs/tree3.png');
+    background-repeat: repeat-x;
+    animation: animate 45s linear infinite;
+}
+@keyframes animate
+{
+    0%{
+        background-position: 0 0;
+    }
+    100%{
+        background-position: 1406px 0;
+    }
+}
+.box .snow{
+    position:absolute;
+    width: 100%;
+    height: 100%;
+    background: url('imgs/snow.png');
+    z-index: 4;
+    animation:snow 15s linear infinite;
+}
+@keyframes snow{
+    0%{
+        background-position: 0 0;
+    }
+    100%{
+        background-position: 0 768px;
+    }
+}
+h1{
+    margin: 20px 0 0;
+    padding: 0;
+    text-align: center;
+    font-size: 8em;
+    animation: colorAnimate 10s linear infinite;
+}
+@keyframes bgAnimate{
+    0%
+    {
+        background: #333333;
+    }
+    25%
+    {
+        background: #616161;
+    }
+    50%
+    {
+        background: #c0c0c0;
+    }
+    75%
+    {
+        background: #d4d4d4;
+    }
+    100%
+    {
+        background: #e7e7e7;
+    }
+}
